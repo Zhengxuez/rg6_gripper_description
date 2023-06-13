@@ -1,0 +1,35 @@
+urdf_gripper_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  g_main_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: g_main
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  l_out_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: l_out
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  r_out_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: r_out
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  l_tip_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: l_tip
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  r_tip_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: r_tip
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  l_passive_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: l_passive
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  r_passive_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: r_passive
+    pid: {p: 100.0, i: 0.01, d: 10.0}

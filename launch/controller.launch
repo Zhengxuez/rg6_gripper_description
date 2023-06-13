@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find rg6_gripper_description)/launch/controller.yaml" command="load"/>
+<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="urdf_gripper" args="g_main_position_controller l_out_position_controller r_out_position_controller l_tip_position_controller r_tip_position_controller l_passive_position_controller r_passive_position_controller joint_state_controller "/>
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+  <remap from="/joint_states" to="/rg6_gripper/joint_states"/>
+</node>
+
+</launch>
