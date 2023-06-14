@@ -234,7 +234,7 @@
 
 <link name="hand_tcp" />
 <joint name="hand_tcp_joint" type="fixed">
-  <origin xyz="0.031849 0 0.235" rpy="0 0 0" />
+  <origin xyz="0.036 0 0.21" rpy="0 0 0" />
   <parent link="g_main_1" />
   <child link="hand_tcp" />
   <axis xyz="-0.0 1.0 -0.0"/>
